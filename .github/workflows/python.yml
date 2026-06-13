@@ -1,0 +1,16 @@
+name: Python
+on: push
+
+jobs:
+  Hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone repo
+        uses: actions/checkout@v3
+
+      - name: setup python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.10'
+      - name: run python
+        run: python vicky.py
